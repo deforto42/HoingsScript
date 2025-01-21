@@ -78,11 +78,11 @@
       <jdbc-url>jdbc:mysql://211.110.181.112:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="[FoAllSync] 110.93.133.90" uuid="db2a349c-944e-4651-9810-4f68b66b0665">
+    <data-source source="LOCAL" name="[FoAllSync] DEV" uuid="db2a349c-944e-4651-9810-4f68b66b0665">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://110.93.133.90:5455</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://110.93.133.90\FoAllSync_Dev:5455;database=FoAllSync_Dev</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="[Office] POSMASTER" uuid="d9857de7-3275-4652-ae9d-d3aa31ff48be">
@@ -103,7 +103,21 @@
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://180.66.171.147:5455</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://180.66.171.147\FoAllSync:5455;database=FoAllSync</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="역전할맥_서초" uuid="419caab4-de65-4933-be3e-83355908e8da">
+      <driver-ref>sqlserver.jtds</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:jtds:sqlserver://183.98.203.170:1433/oak</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="[FastOrder] PORTAL_57" uuid="2c683a32-cadf-4af6-8c76-a205e26b0857">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://110.93.133.57:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
