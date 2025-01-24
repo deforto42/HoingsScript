@@ -14,6 +14,7 @@ INNER JOIN menu_groups mg
 ON m.menu_group_id = mg.id
 WHERE 1=1
 # AND o.store_id = 101171
+AND mg.is_sales_hours_applied = true
 AND (
     DATE_FORMAT(o.created_at, '%H:%i:%s') < mg.sales_start_at
         OR DATE_FORMAT(o.created_at, '%H:%i:%s') > mg.sales_end_at
