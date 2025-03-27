@@ -71,5 +71,12 @@
       <jdbc-url>jdbc:mysql://110.93.133.61:3306/fast</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="fastorder@prod-ai-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com" group="FastOrder/Etc" uuid="84940b2e-d37b-4e78-9538-0f089664e12c">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://prod-ai-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com:3306/fastorder</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
