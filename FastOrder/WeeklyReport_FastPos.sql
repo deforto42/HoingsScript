@@ -17,5 +17,6 @@ WHERE EXISTS (SELECT *
     AND c.name NOT LIKE '%시연%'
     AND c.name NOT LIKE '%웹 연동%'
     AND c.name NOT LIKE '%QA%'
+    AND c.name NOT LIKE '%타키%'
 ORDER BY registered_date DESC;
 
