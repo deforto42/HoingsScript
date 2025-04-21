@@ -48,7 +48,7 @@ ORDER BY POSType;
 
 
 -- 중개서버 연동 포스 비중
-SELECT s.ID, s.Name, POSType
+SELECT s.ID, s.Name, POSType, s.CurrentDemonVersion
 FROM Stores (NOLOCK) s
 WHERE s.name NOT LIKE '%테스트%'
 AND s.name NOT LIKE '%이관전%'
@@ -76,5 +76,5 @@ AND s.ID IN (
                             WHERE device_id IS NOT NULL
                             AND store_id = p.store_id)
     )
-ORDER BY s.ID;
+ORDER BY s.POSType, s.ID, s.[CurrentDemonVersion];
 
