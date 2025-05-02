@@ -33,7 +33,7 @@
       <jdbc-url>jdbc:sqlserver://110.93.133.90\FoAllSync_Dev:5455;database=FoAllSync_Dev</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="oak@192.168.150.219" group="FastOrder/Etc" uuid="d9857de7-3275-4652-ae9d-d3aa31ff48be">
+    <data-source source="LOCAL" name="oak@121.137.248.135" group="FastOrder/Etc" uuid="d9857de7-3275-4652-ae9d-d3aa31ff48be">
       <driver-ref>sqlserver.jtds</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
