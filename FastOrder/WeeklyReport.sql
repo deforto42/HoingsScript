@@ -120,8 +120,34 @@ AND s.name NOT LIKE '%웹 연동%'
 AND s.name NOT LIKE '%QA%';
 
 
-
-
+SELECT p.fas_store_code
+        , GROUP_CONCAT(DISTINCT s.name ORDER BY s.name SEPARATOR ', ') AS 매장명목록
+FROM stores s
+         INNER JOIN poses p
+                    ON s.id = p.store_id
+WHERE EXISTS (SELECT 1
+              FROM orders
+              WHERE total_price != 0
+                AND store_id = s.id)
+  AND EXISTS (SELECT 1
+              FROM tables
+              WHERE device_id IS NOT NULL
+                AND store_id = s.id)
+  AND s.name NOT LIKE '%테스트%'
+  AND s.name NOT LIKE '%이관전%'
+  AND s.name NOT LIKE '%영업%'
+  AND s.name NOT LIKE '%사무실%'
+  AND s.name NOT LIKE '%폐업%'
+  AND s.name NOT LIKE '%쇼룸%'
+  AND s.name NOT LIKE '%쇼륨%'
+  AND s.name NOT LIKE '%본사%'
+  AND s.name NOT LIKE '%시안%'
+  AND s.name NOT LIKE '%시연%'
+  AND s.name NOT LIKE '%웹 연동%'
+  AND s.name NOT LIKE '%QA%'
+  AND p.type = 'FO_ALL_SYNC'
+GROUP BY p.fas_store_code
+HAVING COUNT(1) > 1;
 
 
 
