@@ -76,5 +76,5 @@ AND s.ID IN (
                             WHERE device_id IS NOT NULL
                             AND store_id = p.store_id)
     )
-ORDER BY s.POSType, s.ID, s.[CurrentDemonVersion];
+ORDER BY s.[CurrentDemonVersion], s.POSType, s.ID;
 

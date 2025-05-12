@@ -23,6 +23,63 @@
     AND s.name NOT LIKE '%웹 연동%'
     AND s.name NOT LIKE '%QA%';
 
+    SELECT MAX(status) vStatus
+            , storeId
+            , storeName
+    FROM (SELECT 'N' AS status
+                , s.id AS storeId
+                , s.name AS storeName
+          FROM stores s
+                   INNER JOIN tables t
+                              ON s.id = t.store_id
+                                  AND t.device_id IS NOT NULL
+          WHERE EXISTS (SELECT 1
+                        FROM orders
+                        WHERE total_price != 0
+                          AND store_id = s.id)
+            AND s.name NOT LIKE '%테스트%'
+            AND s.name NOT LIKE '%이관전%'
+            AND s.name NOT LIKE '%영업%'
+            AND s.name NOT LIKE '%사무실%'
+            AND s.name NOT LIKE '%폐업%'
+            AND s.name NOT LIKE '%쇼룸%'
+            AND s.name NOT LIKE '%쇼륨%'
+            AND s.name NOT LIKE '%본사%'
+            AND s.name NOT LIKE '%시안%'
+            AND s.name NOT LIKE '%시연%'
+            AND s.name NOT LIKE '%웹 연동%'
+            AND s.name NOT LIKE '%QA%'
+          GROUP BY s.id, s.name
+          UNION ALL
+          SELECT 'D' AS status
+                , s.id AS storeId
+                , s.name AS storeName
+          FROM stores s
+                   INNER JOIN tables t
+                              ON s.id = t.store_id
+                                  AND t.device_id IS NOT NULL
+          WHERE EXISTS (SELECT 1
+                        FROM orders_bak
+                        WHERE total_price != 0
+                          AND created_at BETWEEN ADDDATE(NOW(), -14) AND NOW()
+                          AND store_id = s.id)
+            AND s.name NOT LIKE '%테스트%'
+            AND s.name NOT LIKE '%이관전%'
+            AND s.name NOT LIKE '%영업%'
+            AND s.name NOT LIKE '%사무실%'
+            AND s.name NOT LIKE '%폐업%'
+            AND s.name NOT LIKE '%쇼룸%'
+            AND s.name NOT LIKE '%쇼륨%'
+            AND s.name NOT LIKE '%본사%'
+            AND s.name NOT LIKE '%시안%'
+            AND s.name NOT LIKE '%시연%'
+            AND s.name NOT LIKE '%웹 연동%'
+            AND s.name NOT LIKE '%QA%'
+          GROUP BY s.id, s.name) t
+    GROUP BY storeId, storeName
+    HAVING COUNT(status) != 2
+    ;
+
     SELECT  NOW() AS 기준일시
             , COUNT(DISTINCT s.id) AS 매장수
             , COUNT(rd.id) AS 기기수량
