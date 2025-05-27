@@ -116,5 +116,13 @@
       <jdbc-url>jdbc:sqlserver://dev-fas-db.forder.co.kr\FoAllSync:5455</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="FastOrder_Temp" group="FastOrder" uuid="1ff2ed0c-999d-4887-b640-d6201f434fb5">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 로그 등..</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://fastorder-temp-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
