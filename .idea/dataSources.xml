@@ -113,7 +113,7 @@
       <synchronize>true</synchronize>
       <remarks>중개서버_개발</remarks>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://dev-fas-db.forder.co.kr\FoAllSync:5455</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://dev-fas-db.forder.co.kr\FoAllSync_Dev:5455</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="FastOrder_Temp" group="FastOrder" uuid="1ff2ed0c-999d-4887-b640-d6201f434fb5">

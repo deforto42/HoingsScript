@@ -24,17 +24,17 @@ AND s.name NOT LIKE '%시안%'
 AND s.name NOT LIKE '%시연%'
 AND s.name NOT LIKE '%웹 연동%'
 AND s.name NOT LIKE '%QA%'
-AND s.ID IN (
+AND s.ID COLLATE SQL_Latin1_General_CP1_CI_AS IN (
                 SELECT DISTINCT fas_store_code
-                FROM MYSQL.fast..poses p
+                FROM fastorder.fast..poses p
                 WHERE type = 'FO_ALL_SYNC'
                 AND fas_store_code IS NOT NULL
                 AND EXISTS (SELECT 1
-                              FROM MYSQL.fast..orders
+                              FROM fastorder.fast..orders
                               WHERE total_price != 0
                               AND store_id = p.store_id)
                 AND EXISTS (SELECT 1
-                            FROM MYSQL.fast..tables
+                            FROM fastorder.fast..tables
                             WHERE device_id IS NOT NULL
                             AND store_id = p.store_id)
     )
@@ -62,17 +62,17 @@ AND s.name NOT LIKE '%시안%'
 AND s.name NOT LIKE '%시연%'
 AND s.name NOT LIKE '%웹 연동%'
 AND s.name NOT LIKE '%QA%'
-AND s.ID IN (
+AND s.ID COLLATE SQL_Latin1_General_CP1_CI_AS IN (
                 SELECT DISTINCT fas_store_code
-                FROM MYSQL.fast..poses p
+                FROM fastorder.fast..poses p
                 WHERE type = 'FO_ALL_SYNC'
                 AND fas_store_code IS NOT NULL
                 AND EXISTS (SELECT 1
-                              FROM MYSQL.fast..orders
+                              FROM fastorder.fast..orders
                               WHERE total_price != 0
                               AND store_id = p.store_id)
                 AND EXISTS (SELECT 1
-                            FROM MYSQL.fast..tables
+                            FROM fastorder.fast..tables
                             WHERE device_id IS NOT NULL
                             AND store_id = p.store_id)
     )

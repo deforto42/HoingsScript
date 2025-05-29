@@ -110,20 +110,6 @@ SELECT  NOW() AS 기준일시
         , COUNT(DISTINCT s.id) AS 매장수
         , SUM(CASE WHEN s.pay_type = 'PREPAID' THEN 1 ELSE 0 END) 선불
         , SUM(CASE WHEN s.pay_type = 'POSTPAID' THEN 1 ELSE 0 END) 후불
-
-        , SUM(CASE WHEN s.name LIKE '%명륜%' THEN 1 ELSE 0 END) 명륜
-        , SUM(CASE WHEN s.name LIKE '%샤브올데이%' THEN 1 ELSE 0 END) 샤브올데이
-        , SUM(CASE WHEN s.name LIKE '%생활맥주%' THEN 1 ELSE 0 END) 생활맥주
-        , SUM(CASE WHEN s.name LIKE '%짬뽕관%' THEN 1 ELSE 0 END) 짬뽕관
-        , SUM(CASE WHEN s.name LIKE '%강창구%' THEN 1 ELSE 0 END) 강창구진순대
-        , SUM(CASE WHEN s.name LIKE '%미도인%' THEN 1 ELSE 0 END) 미도인
-        , SUM(CASE WHEN s.name LIKE '%크라운호프%' THEN 1 ELSE 0 END) 크라운호프
-        , SUM(CASE WHEN s.name LIKE '%고반식당%' THEN 1 ELSE 0 END) 고반식당
-        , SUM(CASE WHEN s.name LIKE '%경성%' THEN 1 ELSE 0 END) 경성
-        , SUM(CASE WHEN s.name LIKE '%니뽕내뽕%' THEN 1 ELSE 0 END) 니뽕내뽕
-        , SUM(CASE WHEN s.name LIKE '%고깃리%' THEN 1 ELSE 0 END) 고깃리
-        , SUM(CASE WHEN s.name LIKE '%제줏간%' THEN 1 ELSE 0 END) 제줏간
-        , SUM(CASE WHEN s.name LIKE '%오봉집%' THEN 1 ELSE 0 END) 오봉집
         , SUM(CASE WHEN s.name NOT LIKE '%명륜%'
             AND s.name NOT LIKE '%샤브올데이%'
             AND s.name NOT LIKE '%생활맥주%'
@@ -138,7 +124,19 @@ SELECT  NOW() AS 기준일시
             AND s.name NOT LIKE '%제줏간%'
             AND s.name NOT LIKE '%오봉집%'
             THEN 1 ELSE 0 END) 기타
-
+        , SUM(CASE WHEN s.name LIKE '%명륜%' THEN 1 ELSE 0 END) 명륜
+        , SUM(CASE WHEN s.name LIKE '%샤브올데이%' THEN 1 ELSE 0 END) 샤브올데이
+        , SUM(CASE WHEN s.name LIKE '%생활맥주%' THEN 1 ELSE 0 END) 생활맥주
+        , SUM(CASE WHEN s.name LIKE '%짬뽕관%' THEN 1 ELSE 0 END) 짬뽕관
+        , SUM(CASE WHEN s.name LIKE '%강창구%' THEN 1 ELSE 0 END) 강창구진순대
+        , SUM(CASE WHEN s.name LIKE '%미도인%' THEN 1 ELSE 0 END) 미도인
+        , SUM(CASE WHEN s.name LIKE '%크라운호프%' THEN 1 ELSE 0 END) 크라운호프
+        , SUM(CASE WHEN s.name LIKE '%고반식당%' THEN 1 ELSE 0 END) 고반식당
+        , SUM(CASE WHEN s.name LIKE '%경성%' THEN 1 ELSE 0 END) 경성
+        , SUM(CASE WHEN s.name LIKE '%니뽕내뽕%' THEN 1 ELSE 0 END) 니뽕내뽕
+        , SUM(CASE WHEN s.name LIKE '%고깃리%' THEN 1 ELSE 0 END) 고깃리
+        , SUM(CASE WHEN s.name LIKE '%제줏간%' THEN 1 ELSE 0 END) 제줏간
+        , SUM(CASE WHEN s.name LIKE '%오봉집%' THEN 1 ELSE 0 END) 오봉집
         , SUM(CASE WHEN p.type = 'OK_POS' THEN 1 ELSE 0 END) OK_POS
         , SUM(CASE WHEN p.type = 'EASY_POS' THEN 1 ELSE 0 END) EASY_POS
         , SUM(CASE WHEN p.type = 'POS_MASTER' THEN 1 ELSE 0 END) POS_MASTER
