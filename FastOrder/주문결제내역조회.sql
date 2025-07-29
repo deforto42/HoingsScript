@@ -2,8 +2,8 @@
 # 100129 : 보들설곰탕
 
 SET @store_id = 100129;
-SET @start_dt = '2025-04-01 00:00:00';
-SET @end_dt = '2025-04-30 23:59:59';
+SET @start_dt = '2025-06-01 00:00:00';
+SET @end_dt = '2025-06-30 23:59:59';
 
     SELECT      CASE ROW_NUMBER() OVER (PARTITION BY o.id ORDER BY om.id) WHEN 1 THEN o.id ELSE '' END '주문ID'
                 , CASE ROW_NUMBER() OVER (PARTITION BY o.id ORDER BY om.id) WHEN 1 THEN s.id ELSE '' END '매장코드'

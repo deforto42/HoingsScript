@@ -174,6 +174,57 @@ AND s.name NOT LIKE '%시연%'
 AND s.name NOT LIKE '%웹 연동%'
 AND s.name NOT LIKE '%QA%';
 
+SELECT  COUNT(DISTINCT t.id) AS 테이블수
+        , SUM(CASE WHEN s.name NOT LIKE '%명륜%'
+            AND s.name NOT LIKE '%샤브올데이%'
+            AND s.name NOT LIKE '%생활맥주%'
+            AND s.name NOT LIKE '%짬뽕관%'
+            AND s.name NOT LIKE '%강창구%'
+            AND s.name NOT LIKE '%미도인%'
+            AND s.name NOT LIKE '%크라운호프%'
+            AND s.name NOT LIKE '%고반식당%'
+            AND s.name NOT LIKE '%경성%'
+            AND s.name NOT LIKE '%니뽕내뽕%'
+            AND s.name NOT LIKE '%고깃리%'
+            AND s.name NOT LIKE '%제줏간%'
+            AND s.name NOT LIKE '%오봉집%'
+            THEN 1 ELSE 0 END) 기타
+        , SUM(CASE WHEN s.name LIKE '%명륜%' THEN 1 ELSE 0 END) 명륜
+        , SUM(CASE WHEN s.name LIKE '%샤브올데이%' THEN 1 ELSE 0 END) 샤브올데이
+        , SUM(CASE WHEN s.name LIKE '%생활맥주%' THEN 1 ELSE 0 END) 생활맥주
+        , SUM(CASE WHEN s.name LIKE '%짬뽕관%' THEN 1 ELSE 0 END) 짬뽕관
+        , SUM(CASE WHEN s.name LIKE '%강창구%' THEN 1 ELSE 0 END) 강창구진순대
+        , SUM(CASE WHEN s.name LIKE '%미도인%' THEN 1 ELSE 0 END) 미도인
+        , SUM(CASE WHEN s.name LIKE '%크라운호프%' THEN 1 ELSE 0 END) 크라운호프
+        , SUM(CASE WHEN s.name LIKE '%고반식당%' THEN 1 ELSE 0 END) 고반식당
+        , SUM(CASE WHEN s.name LIKE '%경성%' THEN 1 ELSE 0 END) 경성
+        , SUM(CASE WHEN s.name LIKE '%니뽕내뽕%' THEN 1 ELSE 0 END) 니뽕내뽕
+        , SUM(CASE WHEN s.name LIKE '%고깃리%' THEN 1 ELSE 0 END) 고깃리
+        , SUM(CASE WHEN s.name LIKE '%제줏간%' THEN 1 ELSE 0 END) 제줏간
+        , SUM(CASE WHEN s.name LIKE '%오봉집%' THEN 1 ELSE 0 END) 오봉집
+FROM stores s
+INNER JOIN poses p
+ON s.id = p.store_id
+INNER JOIN tables t
+ON s.id = t.store_id
+AND t.device_id IS NOT NULL
+WHERE EXISTS (SELECT 1
+              FROM orders
+              WHERE total_price != 0
+              AND store_id = s.id)
+AND s.name NOT LIKE '%테스트%'
+AND s.name NOT LIKE '%이관전%'
+AND s.name NOT LIKE '%영업%'
+AND s.name NOT LIKE '%사무실%'
+AND s.name NOT LIKE '%폐업%'
+AND s.name NOT LIKE '%쇼룸%'
+AND s.name NOT LIKE '%쇼륨%'
+AND s.name NOT LIKE '%본사%'
+AND s.name NOT LIKE '%시안%'
+AND s.name NOT LIKE '%시연%'
+AND s.name NOT LIKE '%웹 연동%'
+AND s.name NOT LIKE '%QA%';
+
 
 SELECT p.fas_store_code
         , GROUP_CONCAT(DISTINCT s.name ORDER BY s.name SEPARATOR ', ') AS 매장명목록
