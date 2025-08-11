@@ -123,6 +123,7 @@ SELECT  NOW() AS 기준일시
             AND s.name NOT LIKE '%고깃리%'
             AND s.name NOT LIKE '%제줏간%'
             AND s.name NOT LIKE '%오봉집%'
+            AND s.name NOT LIKE '%역전%'
             THEN 1 ELSE 0 END) 기타
         , SUM(CASE WHEN s.name LIKE '%명륜%' THEN 1 ELSE 0 END) 명륜
         , SUM(CASE WHEN s.name LIKE '%샤브올데이%' THEN 1 ELSE 0 END) 샤브올데이
@@ -137,6 +138,7 @@ SELECT  NOW() AS 기준일시
         , SUM(CASE WHEN s.name LIKE '%고깃리%' THEN 1 ELSE 0 END) 고깃리
         , SUM(CASE WHEN s.name LIKE '%제줏간%' THEN 1 ELSE 0 END) 제줏간
         , SUM(CASE WHEN s.name LIKE '%오봉집%' THEN 1 ELSE 0 END) 오봉집
+        , SUM(CASE WHEN s.name LIKE '%역전%' THEN 1 ELSE 0 END) 역전
         , SUM(CASE WHEN p.type = 'OK_POS' THEN 1 ELSE 0 END) OK_POS
         , SUM(CASE WHEN p.type = 'EASY_POS' THEN 1 ELSE 0 END) EASY_POS
         , SUM(CASE WHEN p.type = 'POS_MASTER' THEN 1 ELSE 0 END) POS_MASTER
@@ -188,6 +190,7 @@ SELECT  COUNT(DISTINCT t.id) AS 테이블수
             AND s.name NOT LIKE '%고깃리%'
             AND s.name NOT LIKE '%제줏간%'
             AND s.name NOT LIKE '%오봉집%'
+            AND s.name NOT LIKE '%역전%'
             THEN 1 ELSE 0 END) 기타
         , SUM(CASE WHEN s.name LIKE '%명륜%' THEN 1 ELSE 0 END) 명륜
         , SUM(CASE WHEN s.name LIKE '%샤브올데이%' THEN 1 ELSE 0 END) 샤브올데이
@@ -202,6 +205,7 @@ SELECT  COUNT(DISTINCT t.id) AS 테이블수
         , SUM(CASE WHEN s.name LIKE '%고깃리%' THEN 1 ELSE 0 END) 고깃리
         , SUM(CASE WHEN s.name LIKE '%제줏간%' THEN 1 ELSE 0 END) 제줏간
         , SUM(CASE WHEN s.name LIKE '%오봉집%' THEN 1 ELSE 0 END) 오봉집
+        , SUM(CASE WHEN s.name LIKE '%역전%' THEN 1 ELSE 0 END) 역전
 FROM stores s
 INNER JOIN poses p
 ON s.id = p.store_id
