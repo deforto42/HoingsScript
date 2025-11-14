@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/FastOrder/WeeklyReport.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/FastOrder/주문결제내역조회.sql" dialect="MySQL" />
+  </component>
+</project>

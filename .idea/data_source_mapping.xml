@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/FastOrder/WeeklyReport.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
+    <file url="file://$PROJECT_DIR$/FastOrder/주문결제내역조회.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/1ff2ed0c-999d-4887-b640-d6201f434fb5/console.sql" value="1ff2ed0c-999d-4887-b640-d6201f434fb5" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/80c2753e-d2d7-4366-8ed1-8dcae48dd43b/console.sql" value="80c2753e-d2d7-4366-8ed1-8dcae48dd43b" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/80c2753e-d2d7-4366-8ed1-8dcae48dd43b/console_1.sql" value="80c2753e-d2d7-4366-8ed1-8dcae48dd43b" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/80c2753e-d2d7-4366-8ed1-8dcae48dd43b/console_2.sql" value="80c2753e-d2d7-4366-8ed1-8dcae48dd43b" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/80c2753e-d2d7-4366-8ed1-8dcae48dd43b/console_3.sql" value="80c2753e-d2d7-4366-8ed1-8dcae48dd43b" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/80c2753e-d2d7-4366-8ed1-8dcae48dd43b/console_4.sql" value="80c2753e-d2d7-4366-8ed1-8dcae48dd43b" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/a393c23c-2ded-4f04-8c1f-30c2923c1251/console.sql" value="a393c23c-2ded-4f04-8c1f-30c2923c1251" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_1.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_2.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_3.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/d727e563-e184-4dbd-945a-c008f0aedb7e/console_1.sql" value="d727e563-e184-4dbd-945a-c008f0aedb7e" />
+  </component>
+</project>
