@@ -2,15 +2,7 @@
 <project version="4">
   <component name="DataSourcePerFileMappings">
     <file url="file://$PROJECT_DIR$/FastOrder/WeeklyReport.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$PROJECT_DIR$/FastOrder/매장별_앱버전.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_10.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_2.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_3.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_4.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_5.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_6.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_7.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_8.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/c3f1c23b-a3ac-40f7-982f-623c2f91b668/console_9.sql" value="c3f1c23b-a3ac-40f7-982f-623c2f91b668" />
   </component>
 </project>
