@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="fast@110.93.133.58" group="FastOrder/Etc" uuid="5d0e2ea9-8c35-4a18-9cd2-29b50791c461">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 개발 서버</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://110.93.133.58:3306/fast</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
     <data-source source="LOCAL" name="@nas.hoings.com" group="HoingsCompany" uuid="1a8db7d4-bbb1-4a09-bea5-589ec9fbe069">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
@@ -9,11 +17,58 @@
       <jdbc-url>jdbc:mariadb://nas.hoings.com:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="oak@192.168.150.219" group="FastOrder/Etc" uuid="d9857de7-3275-4652-ae9d-d3aa31ff48be">
+    <data-source source="LOCAL" name="log@110.93.133.58" group="FastOrder/Etc" uuid="e5a451f5-d747-4469-bfe4-b7c3ddb05421">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 로그 서버</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://110.93.133.58:3306/log</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="FoAllSync_Dev@110.93.133.90" group="FastOrder/Etc" uuid="db2a349c-944e-4651-9810-4f68b66b0665">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 중개서버 개발 서버</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://110.93.133.90\FoAllSync_Dev:5455;database=FoAllSync_Dev</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="oak@121.137.248.135" group="FastOrder/Etc" uuid="d9857de7-3275-4652-ae9d-d3aa31ff48be">
       <driver-ref>sqlserver.jtds</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>net.sourceforge.jtds.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:jtds:sqlserver://192.168.150.219:1433/oak</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="@tipplegold.sldb.iwinv.net" group="HoingsCompany/Talon/prod" uuid="faac3354-a10f-4ed1-a871-afd3cbe85845">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://tipplegold.sldb.iwinv.net:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="FoAllSync@180.66.171.147" group="FastOrder/Etc" uuid="50b1d200-e5f7-41b3-a5a7-df94a7637d71">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 중개서버 운영 서버</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://180.66.171.147\FoAllSync:5455;database=FoAllSync</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="@110.93.133.57" group="FastOrder/Etc" uuid="2c683a32-cadf-4af6-8c76-a205e26b0857">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 포탈 사이트 개발</remarks>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://110.93.133.57:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="fast@110.93.133.61" group="FastOrder/Etc" uuid="240628a4-eafa-4540-a8ba-a86ec1c3e15f">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>패스트오더 운영 서버</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://110.93.133.61:3306/fast</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="fastorder@prod-ai-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com" group="FastOrder/Etc" uuid="84940b2e-d37b-4e78-9538-0f089664e12c">
@@ -21,6 +76,13 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://prod-ai-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com:3306/fastorder</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="fast_amz@110.93.133.61" group="FastOrder/Etc" uuid="59c0da99-0b9f-4e43-a4bf-982ea6c8497e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://110.93.133.61:3306/fast_amz</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="FastOrder_Prod" group="FastOrder" uuid="c3f1c23b-a3ac-40f7-982f-623c2f91b668">
@@ -38,12 +100,28 @@
       <jdbc-url>jdbc:mysql://localhost:33062/fast</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="FoAllSync_Prod" group="FastOrder" uuid="44d36393-2d6c-4ad7-89ac-c27753bd79df">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>중개서버_운영</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://fas-db.forder.co.kr\FoAllSync:5455</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="FoAllSync_Dev" group="FastOrder" uuid="19c38473-b5dd-4094-9c43-644d8ae794b0">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>중개서버_개발</remarks>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://dev-fas-db.forder.co.kr\FoAllSync_Dev:5455</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
     <data-source source="LOCAL" name="FastOrder_Temp" group="FastOrder" uuid="1ff2ed0c-999d-4887-b640-d6201f434fb5">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <remarks>패스트오더 로그 등..</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://fastorder-temp-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com:3306/fast</jdbc-url>
+      <jdbc-url>jdbc:mysql://fastorder-temp-db.cnaucm6w0m3h.ap-northeast-2.rds.amazonaws.com:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="FAS_Prod" group="FastOrder" uuid="d727e563-e184-4dbd-945a-c008f0aedb7e">

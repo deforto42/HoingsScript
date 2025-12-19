@@ -11,3 +11,5 @@ SELECT * FROM users WHERE name = '김지연';
 SELECT * FROM fast.users WHERE login_id = 'yjadmin';
 
 SELECT * FROM store_groups;
+
+SELECT * FROM stores;
